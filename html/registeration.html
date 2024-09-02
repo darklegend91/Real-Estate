@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+  
+    }
+    body {
+        background:linear-gradient(to bottom ,rgb(147, 147, 147),rgb(108, 198, 234));
+        /* background-position: center; */
+        /* width: 100%;*/
+        height: 100vh; 
+        font-weight: bolder;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .main_cont {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* margin-top: 50px; */
+        width: 100%;
+        height: 100%;
+    }
+
+    .transparent-block {
+        width: 350px;
+        height: 500px;
+        /* border: solid transparent 2px; */
+        border-radius: 24px;
+        /* opacity: 0.3; */
+        /* filter: blur(3px); */
+        border: black 3px solid;
+        /* background-color: rgba(108, 198, 234, 0.299); */
+        background: linear-gradient(rgba(167, 167, 167, 0.374), rgba(0, 191, 255, 0.333));
+        backdrop-filter: blur(38px);
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+        position: absolute;
+        gap: 1rem;
+
+
+    }
+
+    fieldset {
+        padding: 0px 1px;
+        /* border: solid 3px black; */
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: 2px black solid;
+        width: 80%;
+
+
+    }
+
+    fieldset:hover {
+        padding: 3px 1px;
+
+    }
+
+    input {
+        /* width: 100%; */
+        background-color: transparent;
+        border: none;
+        /* outline: none; */
+        font-size: 16px;
+        color: black;
+        padding: 0px 40px 5px 0px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: bold;
+        color: white;
+
+    }
+
+
+    button {
+        padding: 10px 90px;
+        border-radius: 45px;
+        border: transparent;
+        /* font-size: 20px; */
+        font-weight: bolder;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: gray;
+        color: white;
+    }
+
+    a {
+        text-decoration: underline;
+        text-decoration-thickness: 2px;
+        color: black;
+
+    }
+
+    a:hover {
+        color: white;
+    }
+</style>
+
+<body>
+    <div class="main_cont">
+
+        <div class="transparent-block">
+            <span>
+                <h1>Registration</h1>
+            </span>
+
+            <fieldset>
+                <legend>Username</legend>
+                <label for="id"> <input type="name" name="id" id="Name">
+                    <!-- /* 🦆 icon "lock" */ -->
+                    <svg width="20" height="20" viewBox="0 0 164 164" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M163.183 81.5913C163.183 36.6345 126.548 0 81.5913 0C36.6345 0 0 36.6345 0 81.5913C0 105.253 10.1989 126.548 26.354 141.479C26.354 141.561 26.354 141.561 26.2724 141.643C27.0883 142.458 28.0674 143.111 28.8833 143.845C29.3729 144.253 29.7808 144.661 30.2704 144.988C31.739 146.212 33.3708 147.354 34.9211 148.496C35.4922 148.904 35.9818 149.231 36.5529 149.638C38.1031 150.699 39.735 151.678 41.4484 152.576C42.0195 152.902 42.6723 153.31 43.2434 153.636C44.8752 154.534 46.5886 155.35 48.3836 156.084C49.0364 156.411 49.6891 156.737 50.3418 156.982C52.1368 157.716 53.9319 158.369 55.7269 158.94C56.3796 159.185 57.0323 159.429 57.6851 159.593C59.6432 160.164 61.6014 160.653 63.5596 161.143C64.1308 161.306 64.7019 161.469 65.3546 161.551C67.6392 162.04 69.9238 162.367 72.2899 162.611C72.6163 162.611 72.9426 162.693 73.269 162.775C76.0431 163.019 78.8172 163.183 81.5913 163.183C84.3654 163.183 87.1395 163.019 89.832 162.775C90.1584 162.775 90.4848 162.693 90.8111 162.611C93.1773 162.367 95.4618 162.04 97.7464 161.551C98.3175 161.469 98.8887 161.224 99.5414 161.143C101.5 160.653 103.539 160.245 105.416 159.593C106.069 159.348 106.721 159.103 107.374 158.94C109.169 158.287 111.046 157.716 112.759 156.982C113.412 156.737 114.065 156.411 114.717 156.084C116.431 155.35 118.144 154.534 119.858 153.636C120.51 153.31 121.082 152.902 121.653 152.576C123.284 151.597 124.916 150.699 126.548 149.638C127.119 149.312 127.609 148.904 128.18 148.496C129.812 147.354 131.362 146.212 132.831 144.988C133.32 144.58 133.728 144.172 134.218 143.845C135.115 143.111 136.013 142.377 136.829 141.643C136.829 141.561 136.829 141.561 136.747 141.479C152.984 126.548 163.183 105.253 163.183 81.5913ZM121.897 122.142C99.7862 107.293 63.5596 107.293 41.2852 122.142C37.6952 124.508 34.7579 127.282 32.3102 130.301C19.9083 117.736 12.2387 100.52 12.2387 81.5913C12.2387 43.325 43.325 12.2387 81.5913 12.2387C119.858 12.2387 150.944 43.325 150.944 81.5913C150.944 100.52 143.274 117.736 130.872 130.301C128.506 127.282 125.487 124.508 121.897 122.142Z"
+                            fill="black" />
+                        <path
+                            d="M81.5909 40.2217C64.7015 40.2217 50.9941 53.929 50.9941 70.8185C50.9941 87.3815 63.9672 100.844 81.1829 101.334H81.9172H82.4884H82.6516C99.133 100.763 112.106 87.3815 112.188 70.8185C112.188 53.929 98.4803 40.2217 81.5909 40.2217Z"
+                            fill="black" />
+                    </svg>
+
+
+                </label>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Email</legend>
+                <label for="em"> <input type="email" name="ps" id="em">
+                    <svg width="20" height="20" viewBox="0 0 164 123" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M160.091 40.4132C161.334 39.4252 163.183 40.3495 163.183 41.9112V107.089C163.183 115.535 156.33 122.387 147.884 122.387H15.2984C6.8524 122.387 0 115.535 0 107.089V41.943C0 40.3495 1.81668 39.457 3.09155 40.4451C10.2308 45.9907 19.6967 53.0344 52.2057 76.6512C58.9306 81.5594 70.2769 91.8858 81.5913 91.8221C92.9695 91.9177 104.539 81.3682 111.009 76.6512C143.518 53.0344 152.952 45.9589 160.091 40.4132ZM81.5913 81.5913C88.9855 81.7188 99.6306 72.2848 104.985 68.3965C147.279 37.7041 150.498 35.0269 160.25 27.3777C162.099 25.9435 163.183 23.7125 163.183 21.354V15.2984C163.183 6.8524 156.33 0 147.884 0H15.2984C6.8524 0 0 6.8524 0 15.2984V21.354C0 23.7125 1.08363 25.9116 2.93219 27.3777C12.6849 34.995 15.9039 37.7041 58.1976 68.3965C63.552 72.2848 74.1971 81.7188 81.5913 81.5913Z"
+                            fill="black" />
+                    </svg>
+
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Password</legend>
+                <label for="psw"> <input type="password" name="ps" id="password">
+                    <svg width="20" height="20" viewBox="0 0 164 164" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M122.557 54.6399H115.758V41.0413C115.758 22.2753 100.527 7.04492 81.7614 7.04492C62.9954 7.04492 47.765 22.2753 47.765 41.0413V54.6399H40.9657C33.4865 54.6399 27.3672 60.7592 27.3672 68.2384V136.231C27.3672 143.71 33.4865 149.83 40.9657 149.83H122.557C130.036 149.83 136.156 143.71 136.156 136.231V68.2384C136.156 60.7592 130.036 54.6399 122.557 54.6399ZM61.3636 41.0413C61.3636 29.7545 70.4746 20.6435 81.7614 20.6435C93.0482 20.6435 102.159 29.7545 102.159 41.0413V54.6399H61.3636V41.0413ZM122.557 136.231H40.9657V68.2384H122.557V136.231ZM81.7614 115.833C89.2406 115.833 95.3599 109.714 95.3599 102.235C95.3599 94.7556 89.2406 88.6362 81.7614 88.6362C74.2822 88.6362 68.1628 94.7556 68.1628 102.235C68.1628 109.714 74.2822 115.833 81.7614 115.833Z"
+                            fill="black" />
+                    </svg>
+                </label>
+            </fieldset>
+
+
+            <div class="remeber">
+                <input type="checkbox" name="" id="" style="cursor: pointer;"> I agree to the terms and conditions
+            </div>
+
+            <div class="log-button">
+                <a href="index.html"><button>Sign up </button></a>
+            </div>
+
+            <div class="no-account">
+                Already have an account .
+                <a href="loginPageTry.html">Login</a>
+
+            </div>
+
+
+        </div>
+    </div>
+
+</body>
+
+</html>
