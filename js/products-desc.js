@@ -14,5 +14,5 @@ function img1() {
   }
   function img4() {
     let imageElement = document.getElementById("img-2");
-    imageElement.src = "../area2.jpeg";
+    imageElement.src = "../area1.jpeg";
   }
