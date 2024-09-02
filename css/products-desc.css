@@ -24,7 +24,7 @@ body {
 #header-img {
   height: 100vh;
   width: 100vw;
-  background: url("../assets/main-img.jpg");
+  background: url("../main-img.jpg");
   background-size: cover;
 }
 #h-img {
