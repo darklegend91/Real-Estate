@@ -1,0 +1,426 @@
+* {
+    margin: 0;
+    padding: 0;
+    display: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    /* overflow-y: scroll;
+    scrollbar-width: none; */
+}
+
+/* Upper_portion */
+/* .Upper_portion{
+    position: fixed;
+} */
+ /* vars */
+ :root{
+    --GLASS_EFFECT:(linear-gradient135deg,rgba(255,255,255,0.1),rgba(255,255,255,0));
+ }
+
+
+/* images */
+img {
+    border-radius: 12px;
+}
+
+
+
+
+
+
+
+
+
+/* nav bar */
+
+.navbar{
+padding: 0 12px;
+overflow: hidden;
+display: flex;
+/* justify-content: center; */
+/* align-items: center; */
+/* width: 70vw; */
+}
+.nav_div {
+  
+    width: 95%;
+    position: absolute;
+    top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 2;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.225);
+    backdrop-filter: blur(12px);
+}
+ul,.logo{
+    display: flex;
+    padding: 22px;
+    gap: 2rem;
+    font-variant: small-caps;
+}
+ul>li:hover{
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    color: white;
+}
+
+li{
+    margin-top: auto;
+    list-style: none;
+    display: inline-block;
+    /* gap: 3rem; */
+}
+li>a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+button{
+    padding: 7px 15px;
+    background-color: transparent ;
+    border-style: none;
+    border-radius: 4px;
+    border: 0.3px  solid white;
+   
+}
+button>a{
+    text-decoration: none;
+    color: white;
+    /* font-weight: bold; */
+}
+button:hover{
+    background-color: white;
+    border: 0.3px solid black;
+    
+}
+button:hover>a{
+    color:black;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/* background video section */
+.video_text {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    /* height: 99vh; */
+    width: 100%;
+    align-items: center;
+    object-fit: cover;
+
+}
+
+video {
+    position: relative;
+    filter: brightness(65%) contrast(128%);
+    z-index: -3;
+    width: 100%;
+    /* object-fit: cover; */
+    /* height: 100vh; */
+    height: auto;
+
+}
+
+
+
+
+
+
+/* entrance text upon the image */
+.entrance {
+    /* top: 0; 
+    font-size:xx-large ;
+    position: absolute;
+    color:white  ;
+    text-align: center;
+    font-weight: bolder;
+    z-index: 2;
+    width: 99vw;
+    */
+    font-size: xx-large;
+    position: absolute;
+    color: white;
+    text-align: center;
+ font-variant: small-caps;
+    z-index: 2;
+    width: 99vw;
+    /* Ensure it spans the full width */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.entrance>p {
+    line-height: 30px;
+
+}
+
+.small {
+    font-size: x-large;
+}
+#web-desc {
+    width: 100%;
+    top: 10px;
+    backdrop-filter: blur(13px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 5;
+}
+
+.inner_sec_text {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    line-height: 1.6;
+    text-align: center;
+    color: #fff;
+    background: linear-gradient(to bottom,rgb(38, 38, 38),black);
+    border-radius: 8px;
+}
+.inner_sec_text p{
+    padding: 30px 10px;
+width: 90%;
+}
+
+
+
+
+/******** four Places************** */
+.outer_space {
+    width: 100%;
+    height: auto;
+    padding: 90px 20px 0px 20px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inner_places {
+    width: 70%;
+    /* padding: 20px 10px 0px 44px; */
+    padding: 30px;
+    display: grid;
+    grid-template-rows: repeat(2, minmax(200px, 0.5fr));
+    grid-template-columns: repeat(2, minmax(200px, 0.5fr));
+    gap: 2rem;
+    /* padding: 110xp; */
+
+}
+
+
+.place1,
+.place2,
+.place3,
+.place4 {
+    /* border-radius: 12px; */
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    color: white;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+}
+
+
+
+.grid-image {
+    width: 100%;
+    height: 100%;
+    /* border-radius: 12px; */
+    object-fit: cover;
+
+}
+
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.place1:hover .overlay,
+.place2:hover .overlay,
+.place3:hover .overlay,
+.place4:hover .overlay {
+    opacity: 1;
+}
+
+.overlay-text {
+    color: white;
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 20px;
+}
+
+
+
+
+
+
+/* sticky section */
+
+
+.stickyFlex {
+
+    z-index: 1;
+    padding: 150px 20px;
+    background-color: black;
+    
+}
+
+
+.floaty_img {
+    position: sticky;
+    background: black;
+    padding: 20px;
+    top: 0;
+    z-index: 1;
+    color: white;
+    display: flex;
+    justify-content: center;
+    /* align-items: flex-start; */
+    gap: 6rem;
+    /* word-spacing: 10px   ; */
+    font-variant: small-caps;
+}
+.floaty_img p{
+    font-size:20px ;
+}
+
+.sticky1 {
+    top: 0px;
+
+}
+
+.sticky2 {
+    top: 42px;
+
+}
+
+.sticky3 {
+    top: 47px;
+}
+
+
+.sticky_image2 {
+    left: 21px;
+    position: relative;
+  }
+  .sticky_image3{
+    /* position: relative; */
+    left: 11px;
+  }
+  .stickyRightText2 {
+    position: relative;
+    left: 21px;
+  }
+  .stickyRightText3 {
+    position: relative;
+    left: 10px;
+  }
+
+
+
+
+  /* tourism******************** */
+  .touristFav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.water_box {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: repeat(2,1fr);
+  gap :1rem;
+  border: 30px;
+  padding: 40px 22px;
+background-color: black;
+  /* background:linear-gradient(to bottom,rgb(99, 99, 99),rgb(29, 29, 29)); */
+  /* width: 100vw; */
+    /* height: 250px; */
+    /* height: 300px; */
+    /* margin-top: 50px; */
+    /* border-radius: 100px; */
+    /* background-color: /; */
+}
+
+.water1,
+.water2,.water3,.water4 {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    /* text-align: center; */
+    /* flex-wrap: wrap ; */
+    /* width: calc(50% - 1rem); */
+    /* flex-direction: column; */
+    /* width: 80%;
+    height: auto; */
+    gap: 2rem;
+    /* background-color: rgb(0, 0, 0);
+     */
+     background: linear-gradient(to bottom,rgb(28, 28, 28),rgb(15, 15, 15));
+
+    padding: 20px 17px;
+    border-radius: 13px;
+}
+.water{
+    color: white;
+}
+.water img{
+    width: 300px;
+    height: 200px; 
+    object-fit: cover;
+    /* border-radius: 40px;  */
+}
+/* .water .CH{
+    width: 300px;
+} */
+
+.water strong{
+    font-size: 22px;
+}
+.water p{
+    font-size: 18px;
+}
+
+.water2 .Mumbai_Flat{
+    width: 300px;
+}
